@@ -1,24 +1,17 @@
-# README
+Generating running
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+```
+rails new rspec-rails-cookies-bug --skip-action-mailer --skip-action-mailbox --skip-action-text --skip-active-record --skip-active-storage --skip-action-cable --skip-sprockets --skip-spring --skip-listen --skip-javascript --skip-turbolinks --skip-bootsnap --skip-webpack-install
+```
 
-Things you may want to cover:
+Running rspec, you can see the issue, that cookies aren't cleared in POST requests
 
-* Ruby version
+```
+bundle exec rspec
+```
 
-* System dependencies
+But running it though a rails controller test it works just fine
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+bundle exec rails test
+```
